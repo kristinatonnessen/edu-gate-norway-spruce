@@ -1,0 +1,48 @@
+{
+  "name": "edu-gate",
+  "version": "1.0.0",
+  "description": "The frontend part of edugate",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest --config ./jest.config.js --updateSnapshot --coverage",
+    "build": "webpack --config webpack.prod.js",
+    "start": "webpack-dev-server --open --config webpack.dev.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sulenchy/edu-gate.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sulenchy/edu-gate/issues"
+  },
+  "homepage": "https://github.com/sulenchy/edu-gate#readme",
+  "devDependencies": {
+    "@babel/core": "7.1.0",
+    "@babel/preset-env": "7.1.0",
+    "@babel/preset-react": "7.0.0",
+    "babel-jest": "24.9.0",
+    "babel-loader": "8.0.2",
+    "clean-webpack-plugin": "3.0.0",
+    "css-loader": "1.0.0",
+    "enzyme": "3.10.0",
+    "html-webpack-plugin": "3.2.0",
+    "identity-obj-proxy": "3.0.0",
+    "jest": "24.9.0",
+    "mini-css-extract-plugin": "0.8.0",
+    "node-sass": "4.12.0",
+    "react-test-renderer": "16.5.2",
+    "sass-loader": "8.0.0",
+    "webpack-cli": "3.1.1",
+    "webpack-dev-server": "3.8.0",
+    "webpack-merge": "4.2.2"
+  },
+  "dependencies": {
+    "@babel/cli": "7.1.0",
+    "react": "16.5.2",
+    "react-dom": "16.5.2",
+    "react-hot-loader": "4.3.11",
+    "webpack": "4.40.2"
+  }
+}
