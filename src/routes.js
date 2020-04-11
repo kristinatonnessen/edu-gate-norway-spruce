@@ -3,7 +3,7 @@ import About from './components/common/about';
 import Contact from './components/common/contact';
 import Login from './components/login';
 import Signup from './components/signup';
-import ForgotPassword from './components/resetPassword';
+import ResetPassword from './components/resetPassword';
 
 const routes = [
   {
@@ -33,7 +33,7 @@ const routes = [
   },
   {
     path: '/forgotPassword',
-    component: ForgotPassword,
+    component: ResetPassword,
     exact: true
   }
 ];
