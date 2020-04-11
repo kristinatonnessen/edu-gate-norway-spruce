@@ -43,6 +43,12 @@ const InputWrapper = styled.label`
   display: inline-block;
 `;
 
+const InfoWrapper = styled.label`
+  color: ${({ theme }) => theme.pureWhite};
+  width: 100%;
+  display: inline-block;
+`;
+
 const Input = styled.input`
   border-radius: 10px
   display: inline-block;
@@ -82,6 +88,7 @@ export default function Login() {
           </InputWrapper>
           <InputWrapper>Forgot your password? Click <Link to="/forgotPassword">here</Link></InputWrapper>
           <Button type="submit" value="Submit" />
+          <InfoWrapper>Are you new? Click <Link to="/signup">here</Link></InfoWrapper>
         </form>
       </Wrapper>
     </MainWrapper>

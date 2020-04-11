@@ -42,6 +42,11 @@ const InputWrapper = styled.label`
   width: 100%;
   display: inline-block;
 `;
+const InfoWrapper = styled.label`
+  color: ${({ theme }) => theme.pureWhite};
+  width: 100%;
+  display: inline-block;
+`;
 
 const Input = styled.input`
   border-radius: 10px
@@ -85,7 +90,7 @@ export default function ResetPassword() {
             <Input type="password" />
           </InputWrapper>
           <Button type="submit" value="Reset" />
-          <InputWrapper>Goto back <Link to="/login">login</Link></InputWrapper>
+          <InfoWrapper>Back to <Link to="/login">login</Link></InfoWrapper>
         </form>
       </Wrapper>
     </MainWrapper>
