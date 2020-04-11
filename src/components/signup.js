@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-export default function home() {
+export default function SignUp() {
   return (
     <div className="App">
       <h1>Signup !!!</h1>

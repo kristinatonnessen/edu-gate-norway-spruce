@@ -34,7 +34,7 @@ const HeaderTitle = styled.h1`
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
   @media (min-width: 768px){
-    font-size: 80px;
+    font-size: 40px;
   }
 `;
 
@@ -66,22 +66,26 @@ const Button = styled.input`
   width: 77px;
 `;
 
-export default function Login() {
+export default function ResetPassword() {
   return (
     <MainWrapper>
       <Wrapper>
-        <HeaderTitle>Log In</HeaderTitle>
+        <HeaderTitle>Change Password</HeaderTitle>
         <form>
           <InputWrapper>
-            Username
-            <Input type="text" />
+            Email
+            <Input type="email" />
           </InputWrapper>
           <InputWrapper>
-            Password
+            New Password
             <Input type="password" />
           </InputWrapper>
-          <InputWrapper>Forgot your password? Click <Link to="/forgotPassword">here</Link></InputWrapper>
-          <Button type="submit" value="Submit" />
+          <InputWrapper>
+            Retype New Password
+            <Input type="password" />
+          </InputWrapper>
+          <Button type="submit" value="Reset" />
+          <InputWrapper>Goto back <Link to="/login">login</Link></InputWrapper>
         </form>
       </Wrapper>
     </MainWrapper>
