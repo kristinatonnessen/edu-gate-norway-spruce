@@ -1,33 +1,39 @@
-import Home from "./components/home";
-import About from "./components/about";
-import Contact from "./components/contact";
-import Login from "./components/login";
-import Signup from "./components/signup";
+import Home from './components/home';
+import About from './components/common/about';
+import Contact from './components/common/contact';
+import Login from './components/login';
+import Signup from './components/signup';
+import ResetPassword from './components/resetPassword';
 
 const routes = [
   {
-    path: "/",
+    path: '/',
     component: Home,
     exact: true
   },
   {
-    path: "/about",
+    path: '/about',
     component: About,
     exact: true
   },
   {
-    path: "/contact",
+    path: '/contact',
     component: Contact,
     exact: true
   },
   {
-    path: "/login",
+    path: '/login',
     component: Login,
     exact: true
   },
   {
-    path: "/signup",
+    path: '/signup',
     component: Signup,
+    exact: true
+  },
+  {
+    path: '/forgotPassword',
+    component: ResetPassword,
     exact: true
   }
 ];

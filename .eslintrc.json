@@ -1,7 +1,8 @@
 {
   "env": {
     "browser": true,
-    "es6": true
+    "es6": true,
+    "node": true
   },
   "extends": [
     "eslint:recommended",
@@ -33,7 +34,7 @@
     "no-label-var": "error",
     "no-undef": "error",
     "object-curly-spacing": ["error", "always"],
-    "quotes": ["error", "double"],
+    "quotes": ["error", "single"],
     "semi": ["error", "always"]
   }
 }

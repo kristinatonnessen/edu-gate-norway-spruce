@@ -1,34 +1,34 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import styled from "styled-components";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import styled from 'styled-components';
 
 const Wrapper = styled.section`
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    height: 70vh;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 70vh;
 `;
 
 const HeaderTitle = styled.h1`
-font-family: Lato;
-font-style: normal;
-font-weight: 900;
-font-size: 70px;
-line-height: 84px;
-color: ${({ theme }) => theme.pureWhite};
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 70px;
+  line-height: 84px;
+  color: ${({ theme }) => theme.pureWhite};
 
-text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 `;
 
 const Description = styled.p`
-font-family: Lato;
-font-style: normal;
-font-weight: 300;
-font-size: 20px;
-line-height: 24px;
-color: ${({ theme }) => theme.pureBlack};
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 24px;
+  color: ${({ theme }) => theme.pureBlack};
 `;
 
 const NavWrapper = styled.nav`
@@ -46,7 +46,6 @@ const ListItem = styled.li`
   text-transform: lowercase;
   width: 123px;
   text-align: center;
-  
 
   @media (max-width: 768px){
     display: block;

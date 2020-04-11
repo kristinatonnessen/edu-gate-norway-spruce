@@ -7,18 +7,6 @@ const MainWrapper = styled.div`
   justify-content: center;
   align-items: center;
 `;
-
-const HoriFlexWrapper = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between
-  width: 100%;
-`;
-
-const ChildFlexWrapper = styled.label`
-  width: 48%;
-  display: inline-block;
-`;
 const Wrapper = styled.section`
   width: 100%;
   margin-top: 50px;
@@ -46,7 +34,7 @@ const HeaderTitle = styled.h1`
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
   @media (min-width: 768px){
-    font-size: 80px;
+    font-size: 40px;
   }
 `;
 
@@ -54,7 +42,6 @@ const InputWrapper = styled.label`
   width: 100%;
   display: inline-block;
 `;
-
 const InfoWrapper = styled.label`
   color: ${({ theme }) => theme.pureWhite};
   width: 100%;
@@ -84,35 +71,25 @@ const Button = styled.input`
   width: 77px;
 `;
 
-export default function SignUp() {
+export default function ResetPassword() {
   return (
     <MainWrapper>
       <Wrapper>
-        <HeaderTitle>Sign Up</HeaderTitle>
+        <HeaderTitle>Change Password</HeaderTitle>
         <form>
           <InputWrapper>
             Email
             <Input type="email" />
           </InputWrapper>
-          <HoriFlexWrapper>
-            <ChildFlexWrapper>
-              First Name
-              <Input type="text" />
-            </ChildFlexWrapper>
-            <ChildFlexWrapper>
-              Surname
-              <Input type="text" />
-            </ChildFlexWrapper>
-          </HoriFlexWrapper>
           <InputWrapper>
-            Password
+            New Password
             <Input type="password" />
           </InputWrapper>
           <InputWrapper>
-            Confirm Password
+            Retype New Password
             <Input type="password" />
           </InputWrapper>
-          <Button type="submit" value="Submit" />
+          <Button type="submit" value="Reset" />
           <InfoWrapper>Back to <Link to="/login">login</Link></InfoWrapper>
         </form>
       </Wrapper>
