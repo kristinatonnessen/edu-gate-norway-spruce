@@ -1,6 +1,12 @@
+
+// action type
 const IS_LOADING = 'IS_LOADING';
 
-export const loadingAction = {
-  type: IS_LOADING,
-  payload: { loading: true }
+
+//action creator
+export const loadingAction = status =>  {
+  return {
+    type: IS_LOADING,
+    loading: status
+  }
 };

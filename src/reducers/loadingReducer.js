@@ -1,9 +1,9 @@
+import { initialState } from '../store';
 
-
-const loadingReducer = (state = [], { payload, type }) => {
+const loadingReducer = (state =  false, { loading, type }) => {
   switch (type) {
   case 'IS_LOADING':
-    return Object.assign({}, state, payload);
+    return loading;
   default:
     return state;
   }

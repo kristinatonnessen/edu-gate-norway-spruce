@@ -1,8 +1,7 @@
-import React, { useEffect, useCallback } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import { useDispatch } from 'react-redux';
-
+import { connect } from 'react-redux';
 import { loadingAction } from '../actions/loadingAction';
 
 const MainWrapper = styled.div`
@@ -106,18 +105,10 @@ const Button = styled.input`
   width: 77px;
 `;
 
-function SignUp() {
-  const dispatch = useDispatch();
-
-  const loading = useCallback(
-    () =>  {
-        return dispatch(loadingAction);
-    },
-    [dispatch]
-  )
+function SignUp({ loading, loadingState }) {
   
   useEffect(() => {
-    loading()
+      loading(true);
   }, []);
 
 
@@ -156,4 +147,14 @@ function SignUp() {
   );
 }
 
-export default SignUp;
+const mapStateToProps = (store) => {
+    return {
+        loadingState: store.loading
+    }
+}
+
+const mapDispatchToProp = {
+    loading: status => loadingAction(status)
+}
+
+export default connect(mapStateToProps, mapDispatchToProp)(SignUp);

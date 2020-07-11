@@ -5,6 +5,7 @@ import { createLogger } from 'redux-logger';
 import storage from 'redux-persist/lib/storage'
 import thunk from 'redux-thunk';
 import rootReducer from './reducers';
+import loadingReducer from './reducers/loadingReducer';
 
 
 const logger = createLogger();
