@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import { connect } from 'react-redux';
+import { loadingAction } from '../actions/loadingAction';
 
 const MainWrapper = styled.div`
   display: flex;
@@ -19,6 +21,7 @@ const ChildFlexWrapper = styled.label`
   width: 48%;
   display: inline-block;
 `;
+
 const Wrapper = styled.section`
   width: 100%;
   margin-top: 50px;
@@ -69,11 +72,29 @@ const Input = styled.input`
   margin: 10px 0;
   padding: 0 10px;
   width: 100%;
+
+  &[type=text], &[type=email], &[type=password], textarea {
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none;
+    margin: 5px 1px 3px 0px;
+    border: 1px solid #fefefe;
+  };
+   
+  &[type=text]:focus, &[type=email]:focus, &[type=button]:focus, &[type=password]:focus, textarea:focus {
+    box-shadow: 0 0 5px rgba(0, 51, 51, 1);
+    margin: 5px 1px 3px 0px;
+    border: 1px solid rgba(0, 51, 51, 1);
+  }
 `;
 
 const Button = styled.input`
   background: ${({ theme }) => theme.pureWhite};
-  border-radius: 10px
+  border-radius: 10px;
+  border: 1px solid rgb(65,127,126);
+  cursor: pointer;
   font-family: Lato;
   font-style: normal;
   font-weight: 300;
@@ -84,7 +105,13 @@ const Button = styled.input`
   width: 77px;
 `;
 
-export default function SignUp() {
+function SignUp({ loading, loadingState }) {
+  
+  useEffect(() => {
+      loading(true);
+  }, []);
+
+
   return (
     <MainWrapper>
       <Wrapper>
@@ -112,11 +139,22 @@ export default function SignUp() {
             Confirm Password
             <Input type="password" />
           </InputWrapper>
-          <Button type="submit" value="Submit" />
+          <Button type="submit" role="button" value="Submit" />
           <InfoWrapper>Back to <Link to="/login">login</Link></InfoWrapper>
         </form>
       </Wrapper>
     </MainWrapper>
   );
-} 
+}
 
+const mapStateToProps = (store) => {
+    return {
+        loadingState: store.loading
+    }
+}
+
+const mapDispatchToProp = {
+    loading: status => loadingAction(status)
+}
+
+export default connect(mapStateToProps, mapDispatchToProp)(SignUp);
