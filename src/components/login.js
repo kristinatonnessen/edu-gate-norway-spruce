@@ -27,9 +27,9 @@ const HeaderTitle = styled.h1`
   font-family: Lato;
   font-style: normal;
   font-weight: 900;
-  font-size: 40px;
+  font-size: 70px;
   text-align: center;
-  line-height: 24px;
+  line-height: 84px;
   color: ${({ theme }) => theme.pureWhite};
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
