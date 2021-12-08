@@ -16,6 +16,10 @@ const Wrapper = styled.section`
   font-size: 20px;
   line-height: 24px;
   color: #000000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
   @media (min-width: 768px){
     margin: auto;
@@ -30,17 +34,24 @@ const HeaderTitle = styled.h1`
   font-size: 70px;
   text-align: center;
   line-height: 84px;
+  margin-bottom: 14px
   color: ${({ theme }) => theme.pureWhite};
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
   @media (min-width: 768px){
-    font-size: 80px;
+    
   }
 `;
 
 const InputWrapper = styled.label`
-  width: 100%;
   display: inline-block;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 24px;
+  color: #000000;
+  margin-bottom: 14px;
 `;
 
 const Input = styled.input`
@@ -50,7 +61,9 @@ const Input = styled.input`
   height: 31px;
   margin: 10px 0;
   padding: 0 10px;
-  width: 100%;
+  width: 229px;
+  outline: none;
+  border: none;
 `;
 
 const Button = styled.input`
@@ -63,13 +76,28 @@ const Button = styled.input`
   line-height: 18px;
   height: 34px;
   margin: 10px 0;
-  width: 77px;
+  width: 81px;
+  outline: none;
+  border: none;
 `;
 
 const InfoWrapper = styled.label`
   color: ${({ theme }) => theme.pureWhite};
-  width: 100%;
-  display: inline-block;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  height: 43px;
+
+  color: #000000;
+`;
+
+const Div = styled.label`
+  margin-bottom: 11px;
 `;
 
 
@@ -78,18 +106,22 @@ export default function Login() {
     <MainWrapper>
       <Wrapper>
         <HeaderTitle>Log In</HeaderTitle>
-        <form>
-          <InputWrapper>
-            Username
+        <form style={{ width: '229px' }}>
+          <Div>
+            <InputWrapper>
+              Username
+            </InputWrapper>
             <Input type="text" />
-          </InputWrapper>
-          <InputWrapper>
-            Password
+          </Div>
+          <Div>
+            <InputWrapper>
+              Password
+            </InputWrapper>
             <Input type="password" />
-          </InputWrapper>
-          <InputWrapper>Forgot your password? Click <Link to="/forgotPassword">here</Link></InputWrapper>
+          </Div>
+          <InfoWrapper>Forgot your password? Click &nbsp; <Link to="/forgotPassword" style={{ color: '#000', fontWeight:'bold', textDecoration: 'none' }}>here</Link></InfoWrapper>
           <Button type="submit" value="Submit" />
-          <InfoWrapper>Are you new? Click <Link to="/signup">here</Link></InfoWrapper>
+          <InfoWrapper>Are you new? Click &nbsp;<Link to="/signup" style={{ color: '#000', fontWeight:'bold', textDecoration: 'none' }}>here</Link></InfoWrapper>
         </form>
       </Wrapper>
     </MainWrapper>
