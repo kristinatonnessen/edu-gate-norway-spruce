@@ -5,6 +5,7 @@ import Login from './components/login';
 import Signup from './components/signup';
 import Success from './components/Success';
 import ResetPassword from './components/resetPassword';
+import SchoolRegistration from './components/SchoolRegistration';
 
 const routes = [
   {
@@ -40,6 +41,11 @@ const routes = [
   {
     path: '/forgotPassword',
     component: ResetPassword,
+    exact: true
+  },
+  {
+    path: '/school-registration',
+    component: SchoolRegistration,
     exact: true
   }
 ];
