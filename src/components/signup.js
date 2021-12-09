@@ -31,6 +31,10 @@ const Wrapper = styled.section`
   font-size: 20px;
   line-height: 24px;
   color: #000000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
   @media (min-width: 768px){
     margin: auto;
@@ -42,26 +46,39 @@ const HeaderTitle = styled.h1`
   font-family: Lato;
   font-style: normal;
   font-weight: 900;
-  font-size: 40px;
+  font-size: 70px;
   text-align: center;
-  line-height: 24px;
+  line-height: 84px;
   color: ${({ theme }) => theme.pureWhite};
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
   @media (min-width: 768px){
-    font-size: 80px;
+    
   }
 `;
 
 const InputWrapper = styled.label`
-  width: 100%;
-  display: inline-block;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 24px;
+  height: 36px;
 `;
 
 const InfoWrapper = styled.label`
   color: ${({ theme }) => theme.pureWhite};
-  width: 100%;
-  display: inline-block;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  height: 43px;
+
+  color: #000000;
 `;
 
 const Input = styled.input`
@@ -69,25 +86,11 @@ const Input = styled.input`
   display: inline-block;
   font-size: 16px
   height: 31px;
-  margin: 10px 0;
+  margin-top: 11px;
   padding: 0 10px;
   width: 100%;
-
-  &[type=text], &[type=email], &[type=password], textarea {
-    -webkit-transition: all 0.30s ease-in-out;
-    -moz-transition: all 0.30s ease-in-out;
-    -ms-transition: all 0.30s ease-in-out;
-    -o-transition: all 0.30s ease-in-out;
-    outline: none;
-    margin: 5px 1px 3px 0px;
-    border: 1px solid #fefefe;
-  };
-   
-  &[type=text]:focus, &[type=email]:focus, &[type=button]:focus, &[type=password]:focus, textarea:focus {
-    box-shadow: 0 0 5px rgba(0, 51, 51, 1);
-    margin: 5px 1px 3px 0px;
-    border: 1px solid rgba(0, 51, 51, 1);
-  }
+  border: none;
+  outline: none;
 `;
 
 const Button = styled.input`
@@ -103,6 +106,12 @@ const Button = styled.input`
   height: 34px;
   margin: 10px 0;
   width: 77px;
+  border: none;
+  outline: none;
+`;
+
+const Div = styled.div`
+  margin-bottom: 11px;
 `;
 
 function SignUp({ loading, loadingState }) {
@@ -116,31 +125,39 @@ function SignUp({ loading, loadingState }) {
     <MainWrapper>
       <Wrapper>
         <HeaderTitle>Sign Up</HeaderTitle>
-        <form>
-          <InputWrapper>
-            Email
+        <form style={{ width: '245px' }}>
+          <Div>
+            <InputWrapper>
+              Email
+            </InputWrapper>
             <Input type="email" />
-          </InputWrapper>
-          <HoriFlexWrapper>
-            <ChildFlexWrapper>
-              First Name
-              <Input type="text" />
-            </ChildFlexWrapper>
-            <ChildFlexWrapper>
-              Surname
-              <Input type="text" />
-            </ChildFlexWrapper>
-          </HoriFlexWrapper>
-          <InputWrapper>
-            Password
+          </Div>
+          <Div>
+            <HoriFlexWrapper>
+              <ChildFlexWrapper>
+                First Name
+                <Input type="text" />
+              </ChildFlexWrapper>
+              <ChildFlexWrapper>
+                Surname
+                <Input type="text" />
+              </ChildFlexWrapper>
+            </HoriFlexWrapper>
+          </Div>
+          <Div>
+            <InputWrapper>
+              Password
+            </InputWrapper>
             <Input type="password" />
-          </InputWrapper>
-          <InputWrapper>
-            Confirm Password
+          </Div>
+          <Div>
+            <InputWrapper>
+              Confirm Password
+            </InputWrapper>
             <Input type="password" />
-          </InputWrapper>
+          </Div>
           <Button type="submit" role="button" value="Submit" />
-          <InfoWrapper>Back to <Link to="/login">login</Link></InfoWrapper>
+          <InfoWrapper>Back to &nbsp;<Link to="/login" style={{ color: '#000', fontWeight:'bold', textDecoration: 'none' }}>login</Link></InfoWrapper>
         </form>
       </Wrapper>
     </MainWrapper>
