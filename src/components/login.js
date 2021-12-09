@@ -7,6 +7,7 @@ const MainWrapper = styled.div`
   justify-content: center;
   align-items: center;
 `;
+
 const Wrapper = styled.section`
   width: 100%;
   margin-top: 50px;
