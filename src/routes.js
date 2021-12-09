@@ -3,6 +3,7 @@ import About from './components/common/about';
 import Contact from './components/common/contact';
 import Login from './components/login';
 import Signup from './components/signup';
+import Success from './components/Success';
 import ResetPassword from './components/resetPassword';
 
 const routes = [
@@ -29,6 +30,11 @@ const routes = [
   {
     path: '/signup',
     component: Signup,
+    exact: true
+  },
+  {
+    path: '/success',
+    component: Success,
     exact: true
   },
   {
