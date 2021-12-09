@@ -120,9 +120,26 @@ export default function Login() {
             </InputWrapper>
             <Input type="password" />
           </Div>
-          <InfoWrapper>Forgot your password? Click &nbsp; <Link to="/forgotPassword" style={{ color: '#000', fontWeight:'bold', textDecoration: 'none' }}>here</Link></InfoWrapper>
+          <InfoWrapper>
+            Forgot your password? Click &nbsp;
+            <Link
+              to="/forgotPassword"
+              style={{
+                color: '#000', fontWeight:'bold', textDecoration: 'none' }}
+            >
+              here
+            </Link>
+          </InfoWrapper>
           <Button type="submit" value="Submit" />
-          <InfoWrapper>Are you new? Click &nbsp;<Link to="/signup" style={{ color: '#000', fontWeight:'bold', textDecoration: 'none' }}>here</Link></InfoWrapper>
+          <InfoWrapper>
+            Are you new? Click &nbsp;
+            <Link 
+              to="/signup" 
+              style={{ 
+                color: '#000', fontWeight:'bold', textDecoration: 'none' }}>
+                here
+            </Link>
+          </InfoWrapper>
         </form>
       </Wrapper>
     </MainWrapper>
