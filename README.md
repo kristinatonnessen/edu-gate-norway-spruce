@@ -1,6 +1,6 @@
 # Edu-gate
 
-This project is titled Edugate. The idea behind this project centers around providing result management system to schools expecially high school in Nigeria
+Edugate is a result management system tailored to meet the needs of high schools in Nigeria.
 
 ---
 
