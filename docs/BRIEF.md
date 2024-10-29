@@ -127,7 +127,7 @@ The requirements for Edugate's frontend development focus on creating a user-fri
 ### **Technical Stack and Tools**
    - **Framework/Library**: React, Vue, or another frontend framework.
    - **CSS Framework**: Tailwind CSS (if preferred) for design consistency.
-   - **Prototyping Tool**: Figma or Adobe XD for creating and sharing the UI designs.
+   - **Prototyping Tool**: Figma for creating and sharing the UI designs.
    - **Version Control**: Git for collaborative code management.
 
 ---
