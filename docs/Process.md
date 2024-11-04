@@ -14,7 +14,7 @@
 5. **Course and Role Preparation**
    - Review the course content and research your assigned role.
 6. **Project Familiarization**
-   - Review the GitHub Repository’s [user stories](https://github.com/NoroffFEU/edu-gate/blob/develop/docs/BRIEF.md) to understand project requirements.
+   - Review the GitHub Repository’s [user stories](https://github.com/NoroffFEU/edu-gate/blob/develop/docs/Project-Requirements.md) to understand project requirements.
 
 ### Phase 2
 1. **Design Planning**
